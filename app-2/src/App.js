@@ -19,7 +19,7 @@ class App extends Component {
 
   handleInput(e) {
     this.setState({
-      input: e
+      input: e +' '
     })
     console.log(this.state.input)
   }
@@ -45,13 +45,13 @@ class App extends Component {
   
         </div>
 
-        <div>
+        <div className="box">
 
-          <input onChange={ (e) => this.handleInput(e.target.value)}></input>
+          <input className="box2" onChange={ (e) => this.handleInput(e.target.value)}></input>
 
-          <button onClick={ () => this.handlClick(this.state.input)}>Add Item</button>
+          <button className="box3" onClick={ () => this.handlClick(this.state.input)}>Add Item</button>
 
-          <list>Array: {this.state.list}</list>
+          <list className="box4">Array: [{this.state.list}]</list>
 
         </div>
 
